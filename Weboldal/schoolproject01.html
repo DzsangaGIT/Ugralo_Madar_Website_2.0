@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ugráló Madár is a very 'highly professional' Flappy Bird knock-off. Warning: lots of bad design choices.">
+    <meta name="keywords" content="Ugráló Madár, Flappy Bird, budget game, Python, Pygame, LOL">
+    <meta name="author" content="DzsangaGIT aka Totally Serious Dev">
+    <title>Ugráló Madár: The Ultimate Bird Struggle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/bird.png">
+</head>   
+<body>
+    <header>
+        <nav>
+            <ul class="pixel-nav" id="nav-menu">
+                <li><a href="#home">🏠 Home-ish</a></li>
+                <li><a href="#features">✨ Features?</a></li>
+                <li><a href="#description">🤔 Description</a></li>
+                <li><a href="https://github.com/kriszsusu/ugralo-madar/tree/main" target="_blank">🎮 Play Now, Maybe?</a></li>
+                <li class="language-toggle"><button id="lang-toggle">EN/HU??</button></li>
+            </ul>
+            <button class="hamburger" id="hamburger-toggle">🍔</button>
+        </nav>
+
+        <h1 id="main-title">✨Welcome to the Struggle of <span>Ugráló Madár</span>!</h1>
+        <p id="main-description">It's Flappy Bird, but like... REALLY cheap.</p>
+    </header>
+
+    <div class="image-container">
+        <img src="assets/titlescreen.gif" alt="Title Screen that’s really epic">
+        <img src="assets/ingame.png" alt="In-game moment: Majestic bird crash">
+        <img src="assets/gameover.gif" alt="Game Over, because why not?">
+    </div>
+
+    <main>
+        <section id="features" class="game-info">
+            <h2>Alleged Game Features</h2>
+            <ul>
+                <li>✨ Game inspired by Flappy Bird... but, like, not really.</li>
+                <li>🎲 Random pipe placement that is possibly unfair.</li>
+                <li>🐦 Tap to control a bird (sometimes it works!).</li>
+                <li>📈 Scoring system: How far can you struggle before it all goes wrong?</li>
+                <li>💀 Game-over screen with your "final" score (no refunds).</li>
+            </ul>
+        </section>
+
+        <div class="description-section" id="description">
+            <h2>What Even Is This?</h2>
+            <p class="readable">Ugráló Madár is like Flappy Bird but without all the polish. This was made using Python and Pygame in what can only be described as a fever dream.</p>
+            <div class="warning">
+                <p>USE AT YOUR OWN RISK 🤡</p>
+            </div>
+        </div>        
+
+        <section id="play" class="cta">
+            <button class="play-button">✨ Play If You Dare!</button>
+        </section>
+
+        <div id="popup-overlay" class="popup-overlay">
+            <img src="assets/boo.jpg" alt="Troll Face" class="troll-face">
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ugráló Madár: Good Luck Surviving the Struggle!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

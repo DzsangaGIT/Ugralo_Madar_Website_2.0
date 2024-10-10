@@ -1,0 +1,327 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #000000;
+    color: #33FF00;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+    background-image: url('assets/noise-bg.gif'); /* Grainy low-budget background */
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+header {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pixel-nav {
+    list-style: none;
+    padding: 10px 20px;
+    background-color: #FF00FF; /* Eye-scorching magenta */
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 8px solid #00FFFF;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.pixel-nav li {
+    margin: 0 10px;
+}
+
+.pixel-nav li a {
+    text-decoration: none;
+    color: yellow;
+    font-size: 1.2rem;
+    font-family: 'Comic Sans MS', cursive;
+    padding: 10px;
+    border: 3px solid red;
+    transition: all 0.5s ease;
+}
+
+.pixel-nav a:hover {
+    background-color: lime;
+    transform: rotate(360deg);
+}
+
+.language-toggle button {
+    background-color: transparent;
+    color: #E0E0E0;
+    border: 2px solid transparent;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.language-toggle button:hover {
+    border-color: #FF3D00;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger Styles */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #FF00FF;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .pixel-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .pixel-nav.show {
+        max-height: 500px; /* Arbitrary large value to show menu */
+    }
+
+    .pixel-nav li {
+        width: 100%;
+        text-align: left;
+        margin: 5px 0;
+    }
+
+    .pixel-nav a {
+        width: 100%;
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .game-info ul li {
+        font-size: 1rem;
+    }
+
+    .play-button {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    .image-container img {
+        width: 80%;
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 3rem;
+    color: #FF00FF;
+    animation: bounce 1s infinite;
+    text-shadow: 2px 2px 8px #00FFFF;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: cyan;
+    text-shadow: 1px 1px 2px red;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Image Container Styles */
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.image-container img {
+    width: 25%;
+    height: auto;
+    margin: 10px;
+    border: 5px dashed yellow;
+    transform: rotate(-10deg);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.image-container img:hover {
+    transform: rotate(10deg);
+    filter: hue-rotate(90deg);
+}
+
+/* Game Info Styles */
+.game-info {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1E1E1E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.game-info h2 {
+    font-size: 2rem;
+    color: #FFD700;
+    text-shadow: 1px 1px 3px #FF00FF;
+}
+
+.game-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.game-info ul li {
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #FF0000;
+    background-color: #333333;
+    transition: background-color 0.3s;
+}
+
+.game-info ul li:hover {
+    background-color: #555555;
+}
+
+/* Description Section Styles */
+.description-section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1E1E1E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: #E0E0E0;
+}
+
+.description-section h2 {
+    font-size: 2rem;
+    font-family: 'Comic Sans MS', cursive;
+    color: #FFD700;
+    text-shadow: 1px 1px 3px #FF00FF;
+}
+
+.readable {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #E0E0E0;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
+
+.warning {
+    font-size: 2.5rem;
+    color: red;
+    animation: shake 0.3s infinite;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Play Button Styles */
+.play-button {
+    padding: 20px;
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 3px solid yellow;
+    animation: wiggle 0.5s infinite;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+.play-button:hover {
+    background-color: purple;
+    color: lime;
+    transform: scale(1.1);
+}
+
+/* Popup Overlay Styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.popup-overlay img {
+    width: 50%;
+    height: auto;
+    animation: pop 1s ease-in-out;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    background-color: #FF00FF;
+    color: #000;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px #00FFFF;
+}
